@@ -32,47 +32,42 @@ section {
 #introduction {
   background: #ffffff;
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #5a189a; /* Highlight the section */
   margin-bottom: 2rem;
 }
 
-/* Project container - Horizontally stacked */
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: space-between;
+/* Projects layout */
+#projects {
+  background: white;
+  padding: 2rem;
+  border-left: 5px solid #5a189a; /* Add a border for structure */
 }
 
-/* Project card styles */
-.project-card {
-  flex: 1 1 calc(33% - 1rem); /* Adjusts for 3 cards per row */
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+#projects h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #5a189a;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+.project {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd; /* Add separator between projects */
 }
 
-.project-card h3 {
+.project h3 {
   margin-top: 0;
-  color: #5a189a; /* Matching purple */
+  font-size: 1.5rem;
+  color: #5a189a;
 }
 
-.project-card p {
-  margin: 1rem 0;
+.project p {
+  margin: 0.5rem 0;
   color: #555;
 }
 
 .project-links {
-  display: flex;
-  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .project-links a {
@@ -82,7 +77,7 @@ section {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background 0.2s ease;
-  text-align: center;
+  margin-right: 1rem;
 }
 
 .project-links a:hover {
