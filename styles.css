@@ -1,23 +1,27 @@
 /* General styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fc; /* Light neutral background */
+  font-family: "Inter", serif;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #ede8f5; /* Lightest purple shade */
   color: #333;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 /* Header styles */
 header {
-  background-color: #5a189a; /* Deep purple */
+  background-color: #3d52a0; /* Dark purple */
   color: white;
   text-align: center;
   padding: 1.5rem 0;
+  font-size: 2.5rem;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 /* Section styles */
@@ -30,81 +34,75 @@ section {
 }
 
 #introduction {
-  background: #ffffff;
+  background: #d3ddf4; /* Light grayish purple */
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  border-left: 5px solid #3d52a0; /* Dark purple highlight */
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
 }
 
-/* Project container - Horizontally stacked */
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: space-between;
-}
-
-/* Project card styles */
+/* Project card styling */
 .project-card {
-  flex: 1 1 calc(33% - 1rem); /* Adjusts for 3 cards per row */
-  background: #ffffff;
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced evenly */
+  background: #7091e6; /* Mid-tone purple-blue */
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  color: white; /* Make text contrast against the background */
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: #5a189a; /* Matching purple */
-}
-
-.project-card p {
-  margin: 1rem 0;
-  color: #555;
-}
-
-.project-links {
+.project-header {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.project-links a {
+.project-header h3 {
+  margin: 0.5rem;
+  color: #ede8f5; /* Lightest purple */
+}
+
+.github-button {
   text-decoration: none;
   color: white;
-  background: #7b2cbf; /* Lighter purple */
+  background: #3d52a0; /* Dark purple */
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  font-size: 1.25rem;
   transition: background 0.2s ease;
-  text-align: center;
+  width: 170px;
+  height: 25px;
 }
 
-.project-links a:hover {
-  background: #4a148c; /* Darker purple */
+.github-button:hover {
+  background: #2a3e75; /* Slightly darker purple */
 }
 
-/* Footer styles */
-footer {
-  background: #5a189a; /* Deep purple */
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+/* Align text consistently in project cards */
+.project-card p {
+  flex-grow: 1; /* Push footer elements to the bottom */
+  margin: 1rem 0;
+  color: #ede8f5;
+  line-height: 1.5;
+  font-size: 1.6rem;
 }
 
+/* Responsive video container */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  margin-top: 1rem;
 }
 
 .video-container iframe {
@@ -114,4 +112,166 @@ footer {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Footer styles */
+footer {
+  background: #3d52a0; /* Dark purple */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Project container - Two cards per row */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Common styling for images and YouTube thumbnails */
+.project-media {
+  position: relative;
+  margin-top: 3.2rem;
+  width: 75%;
+  height: auto;
+  max-height: 650px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #3d52a0; /* Dark purple */
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ede8f5; /* Lightest purple */
+}
+
+#welcome-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ede8f5; /* Lightest purple shade */
+  text-align: center;
+  color: #3d52a0; /* Dark purple */
+  position: relative;
+}
+
+#welcome-page h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+#welcome-page a {
+  text-decoration: none;
+  color: white;
+  background-color: #3d52a0; /* Dark purple */
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#welcome-page a:hover {
+  background-color: #2a3e75; /* Slightly darker purple */
+}
+
+#welcome-page a:hover::before {
+  left: 100%; /* Move the ribbon out of view */
+}
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.intro-picture {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollable Container */
+.scrollable-container {
+  display: inline-flex;
+  gap: 2rem;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  padding: 1rem;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+/* Always Show Scrollbar */
+.scrollable-container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: #3d52a0;
+  border-radius: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #d3ddf4;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+  background: #2a3e75;
+}
+
+/* Individual Project Card Styling */
+.old-project-card {
+  flex: 0 0 500px;
+  height: 300px;
+  background: #d3ddf4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #2a3e75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Text Styling */
+.old-project-card p {
+  margin: 1rem 0;
+  color: #2a3e75;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  max-width: 100%;
+  word-wrap: break-word;
+  flex-shrink: 1;
+}
+
+/* Header alignment */
+.old-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
